@@ -53,9 +53,9 @@ def main():
     password = 'Chr!zk@t1'
       
     if (password_chk(password)): 
-        print("Password is valid") 
+        print("================= PASSWORD IS VALID! =====================") 
     else: 
-        print("Invalid Password !!") 
+        print("================ PASSWORD IS INVALID! ====================") 
           
 # =============================== DRIVE CODE =================================       
 if __name__ == '__main__': 
