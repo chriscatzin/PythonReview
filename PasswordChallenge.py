@@ -10,7 +10,8 @@ Created on Tue Dec  3 20:55:50 2019
 
 def password_chk(password): 
       
-    SpecialSym =['$', '@', '#', '%','!'] 
+    Sig = ['7']
+    SpecialSym =['$', '@', '#', '%','!', '~'] 
     value = True
       
     # SHOULD HAVE THE LENGTH AT LEAST 5
@@ -43,14 +44,21 @@ def password_chk(password):
     if not any(char in SpecialSym for char in password): 
         print('Password should have at least one of the symbols $@#') 
         value = False
+        
+    if not any(char in Sig for char in password): 
+        print('Password does not contain signature!') 
+        value = False
+        
     if value: 
         return value
+    
+    
   
 # ================================ MAIN METHOD! =============================
         
 # THIS GETS THE INPUT PASSWORD, AND VALIDATES IT FROM THE password_chk function
 def main(): 
-    password = 'Chr!zk@t1'
+    password = input("Enter your password: ")
       
     if (password_chk(password)): 
         print("================= PASSWORD IS VALID! =====================") 
